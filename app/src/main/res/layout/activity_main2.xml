@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.isabelle.labexer3.Main2Activity">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_sharedPref"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/btn_internalStore"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btn_internalStore"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="loadSharedPreference"
+        android:text="Shared Preferences" />
+
+    <Button
+        android:id="@+id/btn_internalStore"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/btn_sharedPref"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_marginTop="15dp"
+        android:onClick="loadInternalStorage"
+        android:text="Internal Storage" />
+
+    <Button
+        android:id="@+id/btn_internalCache"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/btn_internalStore"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_marginTop="15dp"
+        android:onClick="loadInternalCache"
+        android:text="Internal Cache" />
+
+    <Button
+        android:id="@+id/btn_externalCache"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/btn_internalCache"
+        android:layout_alignStart="@+id/btn_internalCache"
+        android:layout_below="@+id/btn_internalCache"
+        android:background="@android:color/holo_blue_light"
+        android:layout_marginTop="15dp"
+        android:onClick="loadExternalCache"
+        android:text="External Cache" />
+
+    <Button
+        android:id="@+id/btn_externalStorage"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/btn_externalCache"
+        android:layout_alignStart="@+id/btn_externalCache"
+        android:layout_below="@+id/btn_externalCache"
+        android:background="@android:color/holo_blue_light"
+        android:layout_marginTop="15dp"
+        android:onClick="loadExternalStorage"
+        android:text="External Storage" />
+
+    <Button
+        android:id="@+id/btn_externalPublic"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/btn_externalStorage"
+        android:layout_alignStart="@+id/btn_externalStorage"
+        android:layout_below="@+id/btn_externalStorage"
+        android:background="@android:color/holo_blue_light"
+        android:layout_marginTop="15dp"
+        android:onClick="loadExternalPublic"
+        android:text="External Public Storage" />
+
+    <Button
+        android:id="@+id/btn_previous"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_externalPublic"
+        android:layout_alignStart="@+id/btn_externalPublic"
+        android:layout_below="@+id/btn_externalPublic"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="15dp"
+        android:onClick="previous"
+        android:text="Previous" />
+
+    <TextView
+        android:id="@+id/tv_display"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_below="@+id/btn_previous"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
