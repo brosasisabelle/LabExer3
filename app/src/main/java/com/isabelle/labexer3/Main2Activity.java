@@ -110,7 +110,7 @@ public class Main2Activity extends AppCompatActivity {
     public void loadExternalStorage (View view) throws FileNotFoundException {
         String newline = "";
         String data = "";
-        File folder = getExternalFilesDir("<PANGALAN MO DITO>");
+        File folder = getExternalFilesDir("Isabelle");
         File file = new File(folder, "storage.txt");
         fis = new FileInputStream(file);
         try{
